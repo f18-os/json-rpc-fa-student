@@ -28,9 +28,9 @@ print(result)
 
 nowJSON = json.dumps(root, default=lambda n: n.__dict__)
 
-print("")
-print(nowJSON)
-print("")
+#print("")
+#print(nowJSON)
+#print("")
 print(server.nop(nowJSON))
 
 rpc.close() # Closes the socket 's' also

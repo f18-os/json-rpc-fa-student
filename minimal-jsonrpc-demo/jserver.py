@@ -21,8 +21,11 @@ class ServerServices(object):
   @request
   def nop(self, txt):
     x = json.loads(txt)
+    # loads can turn txt into a dict, or an object given object_hook
+    # either way turn txt back into the object then encrement
     #increment(x)
     print(x)
+    # after that return to json and send back
     return txt
 
 # Quick-and-dirty TCP Server:
